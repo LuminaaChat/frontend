@@ -4,10 +4,17 @@
     list-style-type: none;
     padding: 0px;
     margin: 10px;
-    background-color: #FCF32C;
-    border-radius: 10px;
+    
     width: fit-content;
     
+    
+    li{
+      border: 2px solid #CCB10B;
+      background-color: #FFE548;
+      border-radius: 10px;
+      margin-left: 3px;
+    }
+
     a {
       color: black;
       text-decoration: none;
