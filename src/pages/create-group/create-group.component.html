@@ -1,0 +1,14 @@
+<div>
+    <h1>Gruppe anlegen/bearbeiten</h1>
+    <label for="create-groupname"> Gruppenname </label>
+    <input id="create-groupname" type="text">
+
+    <label for="create-area">Bereich</label>
+    <select name="area" id="create-area">
+        @for (area of areas; track $index) {
+            <option [value]="area"> {{area}} </option>     
+        } 
+    </select>
+
+
+</div>

@@ -9,7 +9,9 @@
     <label>Rolle:</label>
     <select [(ngModel)]="role">
       <option value="Employee">Mitarbeiter</option>
+      <option value="Client">User Admin</option>
       <option value="Client">Klient</option>
+      <option value="Client">Bezugsperson</option>
     </select>
     <button (click)="back()">Abbrechen</button>
     <button (click)="complete()">Erstellen</button>
