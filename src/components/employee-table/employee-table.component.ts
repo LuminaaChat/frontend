@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserEntity } from '../../models/user.entity';
 
@@ -11,6 +11,9 @@ import { UserEntity } from '../../models/user.entity';
 })
 export class EmployeeTableComponent {
   @Input() content: UserEntity[] = [];
+  @Output() onUserEdit: EventEmitter<string> = new EventEmitter<string>();
 
-  edit(userId: string) {}
+  edit(userId: string) {
+    this.onUserEdit.emit(userId);
+  }
 }

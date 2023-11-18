@@ -1,1 +1,7 @@
-<input type="text" name="search" id="search" />
+<input
+  [(ngModel)]="searchInput"
+  (ngModelChange)="valueChanged($event)"
+  type="text"
+  name="search"
+  id="search"
+/>

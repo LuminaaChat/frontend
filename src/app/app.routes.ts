@@ -16,4 +16,8 @@ export const routes: Routes = [
     path: 'groups',
     component: GroupsComponent,
   },
+  {
+    path: '**',
+    component: EmployeeComponent,
+  },
 ];
