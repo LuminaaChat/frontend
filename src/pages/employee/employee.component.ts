@@ -80,7 +80,9 @@ export class EmployeeComponent {
     );
   }
 
-  editUser(userId: string) {}
+  editUser(userId: string) {
+    this.router.navigateByUrl('edit-user?uid=' + userId);
+  }
 
   newEmployee() {
     this.router.navigateByUrl('create-user');

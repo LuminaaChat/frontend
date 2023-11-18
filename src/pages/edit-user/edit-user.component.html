@@ -1,13 +1,13 @@
 <div class="container">
   <div class="form">
     <label>Name:</label>
-    <input [(ngModel)]="name" type="text" />
+    <input [(ngModel)]="user.name" type="text" />
     <label>Nachname:</label>
-    <input [(ngModel)]="surname" type="text" />
+    <input [(ngModel)]="user.surname" type="text" />
     <label>Email:</label>
-    <input [(ngModel)]="email" type="text" />
+    <input [(ngModel)]="user.email" type="text" />
     <label>Rolle:</label>
-    <select [(ngModel)]="role">
+    <select [(ngModel)]="user.type">
       <option value="Employee">Mitarbeiter</option>
       <option value="Client">Klient</option>
     </select>

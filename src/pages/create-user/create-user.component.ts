@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UserEntity } from '../../models/user.entity';
 import { Roles } from '../../models/roles.enum';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-user',
@@ -12,10 +13,16 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './create-user.component.scss',
 })
 export class CreateUserComponent {
+  constructor(readonly router: Router) {}
+
   name: string = '';
   surname: string = '';
   email: string = '';
   role: Roles = Roles.Client;
+
+  back() {
+    this.router.navigateByUrl('mainpage');
+  }
 
   complete() {
     //this.service.createUser(new UserEntity({name: this.name, surname: this.surname, email: this.email, role: this.role}))
