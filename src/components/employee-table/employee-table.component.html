@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nachname</th>
+    <th>Vorname</th>
+    <th>Typ</th>
+    <th>Gruppe</th>
+    <th>Aktion</th>
+  </tr>
+  <tr *ngFor="let user of content">
+    <td>{{ user.id }}</td>
+    <td>{{ user.surname }}</td>
+    <td>{{ user.name }}</td>
+    <td>{{ user.type }}</td>
+    <td>{{ user.group.name }}</td>
+    <td><button (click)="edit(user.id)">Click</button></td>
+  </tr>
+</table>
