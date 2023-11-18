@@ -1,27 +1,20 @@
-
 <body>
-  
-
-<table class="content-table">
-  <thead>
-  <tr>
-    <th>ID</th>
-    <th>Nachname</th>
-    <th>Vorname</th>
-    <th>Typ</th>
-    <th>Gruppe</th>
-    <th>Aktion</th>
-  </tr>
-  </thead>
-  <tr *ngFor="let user of content">
-    <td>{{ user.id }}</td>
-    <td>{{ user.surname }}</td>
-    <td>{{ user.name }}</td>
-    <td>{{ user.type }}</td>
-    <td>{{ user.group.name }}</td>
-    <td><button (click)="edit(user.id)">Click</button></td>
-  </tr>
-</table>
-
-
+  <table class="content-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nachname</th>
+        <th>Vorname</th>
+        <th>Typ</th>
+        <th>Aktion</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let user of content">
+      <td>{{ user.id }}</td>
+      <td>{{ user.surname }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.type }}</td>
+      <td><button (click)="edit(user.id)">Click</button></td>
+    </tr>
+  </table>
 </body>

@@ -4,6 +4,7 @@ import { SearchBarComponent } from '../../components/search-bar/search-bar.compo
 import { EmployeeTableComponent } from '../../components/employee-table/employee-table.component';
 import { UserEntity } from '../../models/user.entity';
 import { GroupEntity } from '../../models/group.entity';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee',
@@ -16,13 +17,14 @@ export class EmployeeComponent {
   users: UserEntity[] = [];
   filteredUsers: UserEntity[] = [];
 
-  constructor() {
+  constructor(readonly router: Router) {
     this.users = [
       {
         id: 'user123',
         name: 'Alice',
         surname: 'Johnson',
         type: 'Employee',
+        email: 'test@gmail.com',
         group: new GroupEntity({ id: '1', name: 'Baum' }),
       },
       {
@@ -30,6 +32,7 @@ export class EmployeeComponent {
         name: 'Alice',
         surname: 'Johnson',
         type: 'Employee',
+        email: 'test@gmail.com',
         group: new GroupEntity({ id: '1', name: 'Baum' }),
       },
       {
@@ -37,21 +40,7 @@ export class EmployeeComponent {
         name: 'Alice',
         surname: 'Johnson',
         type: 'Employee',
-        group: new GroupEntity({ id: '1', name: 'Baum' }),
-      },
-
-      {
-        id: 'user123',
-        name: 'Alice',
-        surname: 'Johnson',
-        type: 'Employee',
-        group: new GroupEntity({ id: '1', name: 'Baum' }),
-      },
-      {
-        id: 'user123',
-        name: 'Alice',
-        surname: 'Johnson',
-        type: 'Employee',
+        email: 'test@gmail.com',
         group: new GroupEntity({ id: '1', name: 'Baum' }),
       },
 
@@ -60,6 +49,24 @@ export class EmployeeComponent {
         name: 'Alice',
         surname: 'Johnson',
         type: 'Employee',
+        email: 'test@gmail.com',
+        group: new GroupEntity({ id: '1', name: 'Baum' }),
+      },
+      {
+        id: 'user123',
+        name: 'Alice',
+        surname: 'Johnson',
+        type: 'Employee',
+        email: 'test@gmail.com',
+        group: new GroupEntity({ id: '1', name: 'Baum' }),
+      },
+
+      {
+        id: 'user123',
+        name: 'Alice',
+        surname: 'Johnson',
+        type: 'Employee',
+        email: 'test@gmail.com',
         group: new GroupEntity({ id: '1', name: 'Baum' }),
       },
     ];
@@ -73,7 +80,9 @@ export class EmployeeComponent {
     );
   }
 
-  editUser(userId: string) {
-    alert('User Bearbeiten');
+  editUser(userId: string) {}
+
+  newEmployee() {
+    this.router.navigateByUrl('create-user');
   }
 }
