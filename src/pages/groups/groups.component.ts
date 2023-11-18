@@ -5,6 +5,7 @@ import { GroupTableComponent } from '../../components/group-table/group-table.co
 import { UserEntity } from '../../models/user.entity';
 import { GroupEntity } from '../../models/group.entity';
 import { EmployeeTableComponent } from '../../components/employee-table/employee-table.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-groups',
@@ -17,7 +18,7 @@ export class GroupsComponent {
   users: UserEntity[] = [];
   groups: GroupEntity[] = [];
 
-  constructor() {
+  constructor(readonly router: Router) {
     this.groups = [
       {
         id: '43543543',
@@ -98,7 +99,9 @@ export class GroupsComponent {
     ];
   }
 
-  addUser(groupId: string) {}
+  addUser(groupId: string) {
+    this.router.navigateByUrl('add-user?groupId=' + groupId);
+  }
 
   createNewGroup() {}
 }

@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { MainComponent } from '../pages/main/main.component';
 import { CreateUserComponent } from '../pages/create-user/create-user.component';
 import { EditUserComponent } from '../pages/edit-user/edit-user.component';
+import { AddUserComponent } from '../pages/add-user/add-user.component';
 
 export const routes: Routes = [
   {
@@ -15,6 +16,10 @@ export const routes: Routes = [
   {
     path: 'edit-user',
     component: EditUserComponent,
+  },
+  {
+    path: 'add-user',
+    component: AddUserComponent,
   },
   {
     path: '**',
