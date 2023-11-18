@@ -1,7 +1,7 @@
 <div>
   <div class="header">
     <app-search-bar (onInput)="filterList($event)"></app-search-bar>
-    <button>Neuen Mitarbeiter erstellen</button>
+    <button (click)="newEmployee()">Neuen Mitarbeiter erstellen</button>
   </div>
 </div>
 <app-employee-table

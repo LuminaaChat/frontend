@@ -1,7 +1,10 @@
 <nav class="navbar">
   <ul>
-    <li class="nav-item"><a href="employee">Mitarbeiter</a></li>
-    <li class="nav-item"><a href="clients">Klienten</a></li>
-    <li class="nav-item"><a href="groups">Gruppen</a></li>
+    <li (click)="onNavbarClicked.emit(tabs.User)" class="nav-item">
+      Mitarbeiter
+    </li>
+    <li (click)="onNavbarClicked.emit(tabs.Groups)" class="nav-item">
+      Gruppen
+    </li>
   </ul>
 </nav>
