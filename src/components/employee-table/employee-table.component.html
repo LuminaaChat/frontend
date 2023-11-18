@@ -1,4 +1,9 @@
-<table>
+
+<body>
+  
+
+<table class="content-table">
+  <thead>
   <tr>
     <th>ID</th>
     <th>Nachname</th>
@@ -7,6 +12,7 @@
     <th>Gruppe</th>
     <th>Aktion</th>
   </tr>
+  </thead>
   <tr *ngFor="let user of content">
     <td>{{ user.id }}</td>
     <td>{{ user.surname }}</td>
@@ -16,3 +22,6 @@
     <td><button (click)="edit(user.id)">Click</button></td>
   </tr>
 </table>
+
+
+</body>
