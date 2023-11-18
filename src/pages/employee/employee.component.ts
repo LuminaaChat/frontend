@@ -24,6 +24,7 @@ export class EmployeeComponent {
         name: 'Alice',
         surname: 'Johnson',
         type: 'Employee',
+        email: 'test@gmail.com',
         group: new GroupEntity({ id: '1', name: 'Baum' }),
       },
       {
@@ -31,6 +32,7 @@ export class EmployeeComponent {
         name: 'Alice',
         surname: 'Johnson',
         type: 'Employee',
+        email: 'test@gmail.com',
         group: new GroupEntity({ id: '1', name: 'Baum' }),
       },
       {
@@ -38,21 +40,7 @@ export class EmployeeComponent {
         name: 'Alice',
         surname: 'Johnson',
         type: 'Employee',
-        group: new GroupEntity({ id: '1', name: 'Baum' }),
-      },
-
-      {
-        id: 'user123',
-        name: 'Alice',
-        surname: 'Johnson',
-        type: 'Employee',
-        group: new GroupEntity({ id: '1', name: 'Baum' }),
-      },
-      {
-        id: 'user123',
-        name: 'Alice',
-        surname: 'Johnson',
-        type: 'Employee',
+        email: 'test@gmail.com',
         group: new GroupEntity({ id: '1', name: 'Baum' }),
       },
 
@@ -61,6 +49,24 @@ export class EmployeeComponent {
         name: 'Alice',
         surname: 'Johnson',
         type: 'Employee',
+        email: 'test@gmail.com',
+        group: new GroupEntity({ id: '1', name: 'Baum' }),
+      },
+      {
+        id: 'user123',
+        name: 'Alice',
+        surname: 'Johnson',
+        type: 'Employee',
+        email: 'test@gmail.com',
+        group: new GroupEntity({ id: '1', name: 'Baum' }),
+      },
+
+      {
+        id: 'user123',
+        name: 'Alice',
+        surname: 'Johnson',
+        type: 'Employee',
+        email: 'test@gmail.com',
         group: new GroupEntity({ id: '1', name: 'Baum' }),
       },
     ];
@@ -76,5 +82,7 @@ export class EmployeeComponent {
 
   editUser(userId: string) {}
 
-  newEmployee() {}
+  newEmployee() {
+    this.router.navigateByUrl('create-user');
+  }
 }
