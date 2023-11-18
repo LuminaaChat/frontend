@@ -1,1 +1,20 @@
-<p>groups works!</p>
+<div>
+    <div class="header">
+      <app-search-bar (onInput)="filterList($event)"></app-search-bar>
+      <button>Neuen Mitarbeiter erstellen</button>
+    </div>
+  </div>
+
+  @for (group of filtergroup(); track group.id) {
+    <app-group-table
+    
+    (onUserEdit)="editUser($event)"
+    [content]="filteredUsers"
+  ></app-group-table>
+
+  {{group | json }}
+  }
+
+
+  
+  

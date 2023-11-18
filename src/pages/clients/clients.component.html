@@ -1,1 +1,11 @@
-<p>clients works!</p>
+<div>
+    <div class="header">
+      <app-search-bar (onInput)="filterList($event)"></app-search-bar>
+      <button>Neuen Mitarbeiter erstellen</button>
+    </div>
+  </div>
+  <app-client-table
+    (onUserEdit)="editUser($event)"
+    [content]="filteredUsers"
+  ></app-client-table>
+  
