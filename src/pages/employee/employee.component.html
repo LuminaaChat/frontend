@@ -1,7 +1,10 @@
 <div>
   <div class="header">
-    <app-search-bar></app-search-bar>
+    <app-search-bar (onInput)="filterList($event)"></app-search-bar>
     <button>Neuen Mitarbeiter erstellen</button>
   </div>
 </div>
-<app-employee-table [content]="users"></app-employee-table>
+<app-employee-table
+  (onUserEdit)="editUser($event)"
+  [content]="filteredUsers"
+></app-employee-table>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
 import { EmployeeTableComponent } from '../../components/employee-table/employee-table.component';
@@ -12,10 +12,11 @@ import { GroupEntity } from '../../models/group.entity';
   templateUrl: './employee.component.html',
   styleUrl: './employee.component.scss',
 })
-export class EmployeeComponent implements OnInit {
+export class EmployeeComponent {
   users: UserEntity[] = [];
+  filteredUsers: UserEntity[] = [];
 
-  ngOnInit(): void {
+  constructor() {
     this.users = [
       {
         id: 'user123',
@@ -62,5 +63,17 @@ export class EmployeeComponent implements OnInit {
         group: new GroupEntity({ id: '1', name: 'Baum' }),
       },
     ];
+    this.filteredUsers = this.users;
+  }
+
+  filterList(event: string) {
+    console.log(event);
+    this.filteredUsers = this.users.filter((user) =>
+      user.name.toLowerCase().includes(event.toLowerCase())
+    );
+  }
+
+  editUser(userId: string) {
+    alert('User Bearbeiten');
   }
 }
