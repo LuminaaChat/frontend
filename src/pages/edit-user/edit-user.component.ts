@@ -26,7 +26,7 @@ export class EditUserComponent {
       surname: 'Johnson',
       type: 'Employee',
       email: 'test@gmail.com',
-      group: new GroupEntity({ id: '1', name: 'Baum' }),
+      groupId: '124256',
     };
 
     console.log(this.user);

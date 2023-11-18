@@ -4,92 +4,99 @@ import { SearchBarComponent } from '../../components/search-bar/search-bar.compo
 import { GroupTableComponent } from '../../components/group-table/group-table.component';
 import { UserEntity } from '../../models/user.entity';
 import { GroupEntity } from '../../models/group.entity';
-
+import { EmployeeTableComponent } from '../../components/employee-table/employee-table.component';
 
 @Component({
   selector: 'app-groups',
   standalone: true,
   imports: [CommonModule, SearchBarComponent, GroupTableComponent],
   templateUrl: './groups.component.html',
-  styleUrl: './groups.component.scss'
+  styleUrl: './groups.component.scss',
 })
 export class GroupsComponent {
   users: UserEntity[] = [];
-  filteredUsers: UserEntity[] = [];
+  groups: GroupEntity[] = [];
 
   constructor() {
-    this.users = [
+    this.groups = [
       {
-        id: 'user123',
-        name: 'Alice',
-        surname: 'Johnson',
-        type: 'Employee',
-        group: new GroupEntity({ id: '1', name: 'Baum' }),
+        id: '43543543',
+        name: 'Gruppe1',
+        users: [
+          {
+            id: 'user123',
+            name: 'Alice',
+            surname: 'Johnson',
+            type: 'Employee',
+            email: 'test@gmail.com',
+            groupId: '43543543',
+          },
+          {
+            id: 'user123',
+            name: 'Alice',
+            surname: 'Johnson',
+            type: 'Employee',
+            email: 'test@gmail.com',
+            groupId: '43543543',
+          },
+          {
+            id: 'user123',
+            name: 'Alice',
+            surname: 'Johnson',
+            type: 'Employee',
+            email: 'test@gmail.com',
+            groupId: '43543543',
+          },
+          {
+            id: 'user123',
+            name: 'Alice',
+            surname: 'Johnson',
+            type: 'Employee',
+            email: 'test@gmail.com',
+            groupId: '43543543',
+          },
+        ],
       },
       {
-        id: 'user123',
-        name: 'Alice',
-        surname: 'Johnson',
-        type: 'Employee',
-        group: new GroupEntity({ id: '1', name: 'Baum' }),
-      },
-      {
-        id: 'user123',
-        name: 'Alice',
-        surname: 'Johnson',
-        type: 'Employee',
-        group: new GroupEntity({ id: '1', name: 'Baum' }),
-      },
-
-      {
-        id: 'user123',
-        name: 'Alice',
-        surname: 'Johnson',
-        type: 'Employee',
-        group: new GroupEntity({ id: '1', name: 'Baum' }),
-      },
-      {
-        id: 'user123',
-        name: 'Alice',
-        surname: 'Johnson',
-        type: 'Employee',
-        group: new GroupEntity({ id: '1', name: 'Baum' }),
-      },
-
-      {
-        id: 'user123',
-        name: 'Alice',
-        surname: 'Johnson',
-        type: 'Employee',
-        group: new GroupEntity({ id: '1', name: 'Baum' }),
+        id: '43543543',
+        name: 'Gruppe2',
+        users: [
+          {
+            id: 'user123',
+            name: 'Alice',
+            surname: 'Johnson',
+            type: 'Employee',
+            email: 'test@gmail.com',
+            groupId: '43543543',
+          },
+          {
+            id: 'user123',
+            name: 'Alice',
+            surname: 'Johnson',
+            type: 'Employee',
+            email: 'test@gmail.com',
+            groupId: '43543543',
+          },
+          {
+            id: 'user123',
+            name: 'Alice',
+            surname: 'Johnson',
+            type: 'Employee',
+            email: 'test@gmail.com',
+            groupId: '43543543',
+          },
+          {
+            id: 'user123',
+            name: 'Alice',
+            surname: 'Johnson',
+            type: 'Employee',
+            email: 'test@gmail.com',
+            groupId: '43543543',
+          },
+        ],
       },
     ];
-    this.filteredUsers = this.users;
   }
 
-  filterList(event: string) {
-    console.log(event);
-    this.filteredUsers = this.users.filter((user) =>
-      user.name.toLowerCase().includes(event.toLowerCase())
-    );
-  }
-
-  filtergroup()  {
-    let groups: GroupEntity[]  = [];
-      //TODO: FUNCTION DOESN'T WORK. 
-      // NEEDS TO FIND A WAY OF NOT REPEATING TABLES
-    this.users.forEach((user) =>{
-      let result = groups.find((user1)  => { 
-          return user1.id == user.id;
-        })
-      if(!result)
-        groups.push(user.group)
-      });
-
-    return groups;
-  }
-
-  editUser(userId: string) {
-    alert('User Bearbeiten');
-  }
+  addUser(groupId: string) {}
 }

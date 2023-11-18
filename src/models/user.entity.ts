@@ -6,7 +6,7 @@ export class UserEntity {
   surname: string;
   type: string;
   email: string;
-  group: GroupEntity;
+  groupId: string;
 
   constructor(user: UserEntity) {
     this.id = user.id;
@@ -14,6 +14,6 @@ export class UserEntity {
     this.surname = user.surname;
     this.type = user.type;
     this.email = user.email;
-    this.group = user.group;
+    this.groupId = user.groupId;
   }
 }

@@ -1,20 +1,5 @@
-<div>
-    <div class="header">
-      <app-search-bar (onInput)="filterList($event)"></app-search-bar>
-      <button>Neuen Mitarbeiter erstellen</button>
-    </div>
-  </div>
-
-  @for (group of filtergroup(); track group.id) {
-    <app-group-table
-    
-    (onUserEdit)="editUser($event)"
-    [content]="filteredUsers"
-  ></app-group-table>
-
-  {{group | json }}
-  }
-
-
-  
-  
+@for (group of groups; track group.id) {
+<h2>{{ group.name }}</h2>
+<app-group-table [content]="group.users"></app-group-table>
+<button (click)="addUser(group.id)">User hinzufügen</button>
+}

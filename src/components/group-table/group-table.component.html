@@ -1,9 +1,6 @@
-
 <body>
-  
-
-    <table class="content-table">
-      <thead>
+  <table class="content-table">
+    <thead>
       <tr>
         <th>ID</th>
         <th>Nachname</th>
@@ -11,14 +8,13 @@
         <th>Rolle</th>
         <th>Aktion</th>
       </tr>
-      </thead>
-      <tr *ngFor="let user of content">
-        <td>{{ user.id }}</td>
-        <td>{{ user.surname }}</td>
-        <td>{{ user.name }}</td>
-        <td>{{ user.type }}</td>
-        <td><button (click)="edit(user.id)">Click</button></td>
-      </tr>
-    </table>
-    
-    </body>
+    </thead>
+    <tr *ngFor="let user of content">
+      <td>{{ user.id }}</td>
+      <td>{{ user.surname }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.type }}</td>
+      <td><button (click)="remove(user.id)">Click</button></td>
+    </tr>
+  </table>
+</body>
