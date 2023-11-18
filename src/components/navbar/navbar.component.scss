@@ -1,33 +1,10 @@
 .navbar {
-  ul{
-    display: flex;
-    list-style-type: none;
-    text-align: center;
-    padding: 0px;
-    margin: 10px;
-    background-color: #FCF32C;
-    border-radius: 10px;
-    width: fit-content;
-    
-    a {
-      color: black;
-      text-decoration: none;
-      display: flex;
-      padding: 20px;
-      padding-left: 30px;
-      padding-right: 30px;
-      text-align: center;
-      font-size: 20px;
-      font-family: Arial, Helvetica, sans-serif;
-        &:hover {
-          background-color: #808080;
-          border-radius: 10px;
-        }
-    }
-  }
-  
-  
+  display: flex;
+  list-style: none;
+  gap: 1rem;
 }
-
-
-
+.nav-item {
+  background-color: #ffe548;
+  padding: 1rem;
+  border-radius: 10px;
+}
