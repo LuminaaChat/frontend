@@ -8,8 +8,15 @@
     <input [(ngModel)]="email" type="text" />
     <label>Rolle:</label>
     <select [(ngModel)]="role">
+<<<<<<< HEAD
       <option [value]="roles.Employee">Mitarbeiter</option>
       <option [value]="roles.Client">Klient</option>
+=======
+      <option value="Employee">Mitarbeiter</option>
+      <option value="Client">User Admin</option>
+      <option value="Client">Klient</option>
+      <option value="Client">Bezugsperson</option>
+>>>>>>> origin/create-group
     </select>
     <button (click)="back()">Abbrechen</button>
     <button (click)="complete()">Erstellen</button>

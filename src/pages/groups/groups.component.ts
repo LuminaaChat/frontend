@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
 import { GroupTableComponent } from '../../components/group-table/group-table.component';
@@ -6,6 +6,7 @@ import { UserEntity } from '../../models/user.entity';
 import { GroupEntity } from '../../models/group.entity';
 import { EmployeeTableComponent } from '../../components/employee-table/employee-table.component';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-groups',
@@ -103,5 +104,7 @@ export class GroupsComponent {
     this.router.navigateByUrl('add-user?groupId=' + groupId);
   }
 
-  createNewGroup() {}
+  createNewGroup() {
+    this.router.navigateByUrl('create-group')
+  }
 }
