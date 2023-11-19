@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 })
 export class CreateUserComponent {
   constructor(readonly router: Router) {}
+  roles = Roles;
 
   name: string = '';
   surname: string = '';
