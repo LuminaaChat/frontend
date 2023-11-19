@@ -3,6 +3,8 @@ import { MainComponent } from '../pages/main/main.component';
 import { CreateUserComponent } from '../pages/create-user/create-user.component';
 import { EditUserComponent } from '../pages/edit-user/edit-user.component';
 import { AddUserComponent } from '../pages/add-user/add-user.component';
+import { CreateGroupComponent } from '../pages/create-group/create-group.component';
+import { LoginComponent } from '../pages/login/login.component';
 
 export const routes: Routes = [
   {
@@ -14,6 +16,10 @@ export const routes: Routes = [
     component: CreateUserComponent,
   },
   {
+    path: 'create-group',
+    component: CreateGroupComponent,
+  },
+  {
     path: 'edit-user',
     component: EditUserComponent,
   },
@@ -23,6 +29,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    component: MainComponent,
+    component: LoginComponent,
   },
 ];
