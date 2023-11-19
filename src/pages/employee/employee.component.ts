@@ -56,7 +56,6 @@ export class EmployeeComponent {
   }
 
   filterList(event: string) {
-    console.log(event);
     this.filteredUsers = this.users.filter((user) =>
       user.name.toLowerCase().includes(event.toLowerCase())
     );
