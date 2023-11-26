@@ -1,2 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-:root{font-family: Arial, Helvetica, sans-serif;}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Titillium-Regular';
+  font-style: normal;
+  font-weight: bold;
+  src: url('./assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf');
+}
+
+:root {
+  font-size: large;
+  font-family: 'Titillium-Regular', serif !important;
+}

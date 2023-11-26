@@ -1,7 +1,0 @@
-<button (click)="createNewGroup()">Neue Gruppe erstellen</button>
-
-@for (group of groups; track group.id) {
-<h2>{{ group.name }}</h2>
-<app-group-table [content]="group.users"></app-group-table>
-<button (click)="addUser(group.id)">User hinzufügen</button>
-}

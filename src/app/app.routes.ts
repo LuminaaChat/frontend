@@ -1,34 +1,43 @@
 import { Routes } from '@angular/router';
-import { MainComponent } from '../pages/main/main.component';
-import { CreateUserComponent } from '../pages/create-user/create-user.component';
-import { EditUserComponent } from '../pages/edit-user/edit-user.component';
-import { AddUserComponent } from '../pages/add-user/add-user.component';
-import { CreateGroupComponent } from '../pages/create-group/create-group.component';
-import { LoginComponent } from '../pages/login/login.component';
+import {LoginComponent} from "./pages/login/login.component";
+import {TermsComponent} from "./pages/terms/terms.component";
+import {DataPrivacyComponent} from "./pages/data-privacy/data-privacy.component";
+import {ImpressComponent} from "./pages/impress/impress.component";
+import {PinComponent} from "./pages/pin/pin.component";
 
 export const routes: Routes = [
   {
-    path: 'mainpage',
-    component: MainComponent,
+    path: 'admin',
+    loadChildren: () => import('./pages/admin/admin.routes').then(m => m.ADMIN_ROUTES),
   },
   {
-    path: 'create-user',
-    component: CreateUserComponent,
+    path: 'login',
+    component: LoginComponent
   },
   {
-    path: 'create-group',
-    component: CreateGroupComponent,
+    path: 'pin',
+    component: PinComponent
   },
   {
-    path: 'edit-user',
-    component: EditUserComponent,
+    path: 'terms',
+    component: TermsComponent
   },
   {
-    path: 'add-user',
-    component: AddUserComponent,
+    path: 'privacy',
+    component: DataPrivacyComponent
+  },
+  {
+    path: 'impress',
+    component: ImpressComponent
   },
   {
     path: '**',
-    component: LoginComponent,
+    pathMatch: 'full',
+    redirectTo: 'admin'
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'admin'
   },
 ];
