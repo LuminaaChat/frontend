@@ -13,9 +13,9 @@ export class UsersApiService {
 
   constructor(private http: HttpClient) { }
 
-  list(): Signal<User[] | undefined> {
+  list(): Signal<User[]> {
     const observable: Observable<User[]> = this.http.get<User[]>(this.baseUrl);
-    return toSignal(observable);
+    return toSignal(observable) as Signal<User[]>;
   }
 
   get(id: string): Signal<User | undefined> {

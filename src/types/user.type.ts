@@ -6,6 +6,7 @@ export type User = {
     lastName: string;
     password: string;
     pin: string;
+    active: boolean;
     lastLoginAt: Date;
     createdAt: Date;
     updatedAt: Date;

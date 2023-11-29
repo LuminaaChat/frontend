@@ -36,8 +36,8 @@
             <thead>
             <tr>
               <th>ID</th>
-              <th>Titel</th>
-              <th>Art</th>
+              <th>Gruppe</th>
+              <th>Bereich</th>
               <th>Benutzer</th>
               <th>Angelegt am</th>
               <th>Status</th>
@@ -46,136 +46,23 @@
             </thead>
             <tbody>
             <!-- row 1 -->
+            @for ( user of users$(); track user._id ) {
             <tr>
-              <th>888888</th>
+              <th>{{ user._id }}</th>
               <td>Group_name</td>
               <td>Stationär</td>
-              <td>12</td>
+              <td>{{ user.firstName }} {{ user.lastName }}</td>
               <td>tt.mm.yyyy, hh:mm</td>
-              <td>Aktiv</td>
+              <td>{{user.active}}</td>
               <td>
                 <button class="btn btn-square btn-ghost">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
                 </button>
               </td>
             </tr>
-            <tr>
-              <th>888888</th>
-              <td>Group_name</td>
-              <td>Stationär</td>
-              <td>12</td>
-              <td>tt.mm.yyyy, hh:mm</td>
-              <td>Aktiv</td>
-              <td>
-                <button class="btn btn-square btn-ghost">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th>888888</th>
-              <td>Group_name</td>
-              <td>Stationär</td>
-              <td>12</td>
-              <td>tt.mm.yyyy, hh:mm</td>
-              <td>Aktiv</td>
-              <td>
-                <button class="btn btn-square btn-ghost">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th>888888</th>
-              <td>Group_name</td>
-              <td>Stationär</td>
-              <td>12</td>
-              <td>tt.mm.yyyy, hh:mm</td>
-              <td>Aktiv</td>
-              <td>
-                <button class="btn btn-square btn-ghost">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th>888888</th>
-              <td>Group_name</td>
-              <td>Stationär</td>
-              <td>12</td>
-              <td>tt.mm.yyyy, hh:mm</td>
-              <td>Aktiv</td>
-              <td>
-                <button class="btn btn-square btn-ghost">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th>888888</th>
-              <td>Group_name</td>
-              <td>Stationär</td>
-              <td>12</td>
-              <td>tt.mm.yyyy, hh:mm</td>
-              <td>Aktiv</td>
-              <td>
-                <button class="btn btn-square btn-ghost">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th>888888</th>
-              <td>Group_name</td>
-              <td>Stationär</td>
-              <td>12</td>
-              <td>tt.mm.yyyy, hh:mm</td>
-              <td>Aktiv</td>
-              <td>
-                <button class="btn btn-square btn-ghost">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th>888888</th>
-              <td>Group_name</td>
-              <td>Stationär</td>
-              <td>12</td>
-              <td>tt.mm.yyyy, hh:mm</td>
-              <td>Aktiv</td>
-              <td>
-                <button class="btn btn-square btn-ghost">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th>888888</th>
-              <td>Group_name</td>
-              <td>Stationär</td>
-              <td>12</td>
-              <td>tt.mm.yyyy, hh:mm</td>
-              <td>Aktiv</td>
-              <td>
-                <button class="btn btn-square btn-ghost">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th>888888</th>
-              <td>Group_name</td>
-              <td>Stationär</td>
-              <td>12</td>
-              <td>tt.mm.yyyy, hh:mm</td>
-              <td>Aktiv</td>
-              <td>
-                <button class="btn btn-square btn-ghost">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                </button>
-              </td>
-            </tr>
+            } @empty {
+              <tr>No results yet!</tr>
+            }
             </tbody>
           </table>
         </div>
